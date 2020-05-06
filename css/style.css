@@ -13,9 +13,9 @@
   --fw-reg: 300;
   --fw-bold: 900;
 
-  --clr-light: #fff;
+  --clr-light: #f3fbfb;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #79aff7;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -151,6 +151,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
+  opacity: .9;
 
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -304,11 +305,34 @@ header {
 
 .services {
   margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service {
   max-width: 500px;
   margin: 0 auto;
+  overflow: visible;
+}
+
+.service ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.service li i {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  padding: 0.2em;
+}
+
+.service li img {
+  width: 10px;
+  height: 10px;
+  padding: 0.2em;
 }
 
 @media (min-width: 800px) {
@@ -459,4 +483,18 @@ header {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent);
+}
+
+.portfolio-item-individual p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item-individual p a:hover {
+  text-decoration: underline;
+
 }
