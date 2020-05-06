@@ -312,7 +312,6 @@ header {
 .service {
   max-width: 500px;
   margin: 0 auto;
-  overflow: visible;
 }
 
 .service ul {
@@ -321,18 +320,21 @@ header {
   height: 100%;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .service li i {
   font-weight: var(--fw-bold);
   font-size: var(--fs-h2);
+  color: var(--clr-light);
   padding: 0.2em;
 }
 
 .service li img {
-  width: 10px;
-  height: 10px;
+  width: 90px;
+  height: 90px;
   padding: 0.2em;
+  max-width: 150%;
 }
 
 @media (min-width: 800px) {
@@ -346,6 +348,11 @@ header {
   .service + .service {
     margin-left: 2em;
   }
+
+  /* .service li img {
+    width: 24px;
+    height: 24px;
+  } */
 }
 
 /* About me section */
